@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: kafkaServer
+  threads:
+    virtual:
+      enabled: true
+server:
+  port: 8092
+
+#springdoc:
+#  api-docs:
+#    path: /v3/api-docs
+#  swagger-ui:
+#    path: /swagger-ui.html
+#    enable: true
+#  show-actuator: true
+#  packages-to-scan: com.vishalpal555.kafkaServer.controller
+
+logging:
+  level:
+    root: DEBUG
+    org.springframework: DEBUG
+    com.vishalpal555.kafkaServer: DEBUG
