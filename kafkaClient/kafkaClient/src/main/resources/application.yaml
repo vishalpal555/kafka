@@ -1,19 +1,22 @@
 spring:
   application:
-    name: kafkaServer
+    name: kafkaClient
+
   threads:
     virtual:
       enabled: true
   kafka:
-    producer:
+    consumer:
       bootstrap-servers: localhost:9092
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: org.apache.kafka.common.serialization.StringSerializer
+      auto-offset-reset: earliest
+      group-id: user-group
 server:
-  port: 8092
+  port: 8093
 
-logging:
-  level:
-    root: DEBUG
-    org.springframework: DEBUG
-    com.vishalpal555.kafkaServer: DEBUG
+#logging:
+#  level:
+#    root: DEBUG
+#    org.springframework: DEBUG
+#    com.vishalpal555.kafkaClient: DEBUG
